@@ -49,11 +49,17 @@ pip install awscli-local
 
 ### Configurar o projeto
 - Crie uma nova pasta para o projeto e navegue até ela no terminal.
-- Execute npm init -y para criar um arquivo package.json.
-- Instale as dependências necessárias com o comando  npm install --save-dev serverless serverless-localstack.
+- Execute o comando abaixo para criar um arquivo package.json.
+```sh
+ npm init -y
+```
+- Instale as dependências necessárias com o comando.
+```sh
+ npm install --save-dev serverless-localstack
+```
 
 ### Configurando o Serverless e LocalStack
-- Crie um arquivo serverless.yml e adicione a seguinte configuração (substitua "meu-projeto" pelo nome do seu projeto):
+- Crie um arquivo serverless.yml e adicione a seguinte configuração (substitua "iac-aws-localstack" pelo nome do seu projeto):
 
 ```sh
 service: iac-aws-localstack
@@ -86,7 +92,7 @@ functions:
 
 ## Starting LocalStack docker-composer
 
-Você pode iniciar o LocalStack com Docker Compose configurando um arquivo docker-compose.yml. Atualmente, a versão 1.9.0+ do docker-compose é suportada.
+Você pode iniciar o LocalStack com Docker Compose configurando um arquivo docker-compose.yml.
 
 ```sh
 version: "3.8"
