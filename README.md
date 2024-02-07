@@ -39,9 +39,13 @@ pip install awscli-local
 ```
 
 ### Pré-requisitos
- - Instale o Node.js (recomendamos a versão 14.x ou superior).
+- Instale o Node.js (recomendamos a versão 14.x ou superior).
 - Instale o Docker e o Docker Compose.
-- Instale o Serverless Framework globalmente com o comando npm install -g serverless.
+- Instale o Serverless Framework globalmente com o comando:
+
+```sh
+ npm install -g serverless
+```
 
 ### Configurar o projeto
 - Crie uma nova pasta para o projeto e navegue até ela no terminal.
@@ -124,17 +128,33 @@ module.exports.hello = async (event) => {
 ```
 
 
-### Atualize os seguintes scripts no seu package.json
+### Atualize seu package.json com a seguinte configuração:
 
 ``` sh
+{
+  "name": "iac-localstack-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "infra:up": "docker-compose up -d",
     "infra:down": "docker-compose down",
     "infra:logs": "docker-compose logs -f",
     "deploy": "sls deploy --stage local"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-localstack": "1.2.0"
+  }
+}
   ```
 Agora que você configurou tudo, siga os passos abaixo para implantar e testar sua aplicação localmente:
+
+```sh
+npm install
+```
 
 ## Inicie o LocalStack
 No terminal, execute o seguinte comando para subir o LocalStack usando o Docker Compose:
