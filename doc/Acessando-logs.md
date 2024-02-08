@@ -15,8 +15,9 @@ Quando realizar o login, ira cair nessa pagina:
 ![img/image02.png](img/image02.png)
 
 Na barra lateral procure pelo menu Defaul instancia
-
-![img/image03.png](img/image03.png)
+<p align="center">
+  <img src="img/image03.png" alt="Descrição da imagem">
+</p>
 
 Aqui tera dos os serviços disponivel quando e criado usando serverless.
 
