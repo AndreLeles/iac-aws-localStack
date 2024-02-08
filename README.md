@@ -210,7 +210,7 @@ npm run infra:logs
 Outra opçao para consultar logs, pode ser feito pela console via Browser da localStack
 
 Procedimento:
-[link do procedimento](/doc/Acessando-logs)
+[link do procedimento](/doc/Acessando-logs.md)
 
 ## Encerrar o ambiente:
 Quando terminar de testar sua aplicação, execute o seguinte comando para encerrar o LocalStack e remover os contêineres Docker:
@@ -252,7 +252,7 @@ curl --location --request POST 'http://localhost:4566/restapis/u8ehgbwatt/local/
 Outra opçao para consultar logs, pode ser feito pela console via Browser da localStack
 
 Procedimento:
-[link do procedimento](/doc/Acessando-logs)
+[link do procedimento](/doc/Acessando-logs.md)
 
 
 Para usar uma URL alternativa, Aqui está um exemplo de como você acessaria a API HTTP/REST com um ID u8ehgbwatt:
