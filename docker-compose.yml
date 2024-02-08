@@ -8,7 +8,7 @@ services:
       - '127.0.0.1:4571:4571'
     environment:
       # LocalStack configuration: https://docs.localstack.cloud/references/configuration/
-      - LOCALSTACK_AUTH_TOKEN="ls-FosIJIBO-luBa-WUpe-9377-8829bUlo181f"
+      - LOCALSTACK_AUTH_TOKEN="ls-FosIJIBO-***********" #Pegar o token pela console do localstack https://app.localstack.cloud/
       - DEBUG=0 #Valor 1 habilitar DEBUG
       - SERVICES=logs,cloudformation,iam,s3,lambda,apigateway
       - DATA_DIR=/tmp/localstack/data

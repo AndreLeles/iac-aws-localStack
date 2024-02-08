@@ -1,6 +1,6 @@
 ## Usando LocalStack junto com Serverless Framework: Um guia passo a passo
 
-![img/localstack.png](img/localstack.png)
+![doc/img/localstack.png](doc/img/localstack.png)
 
 ## Installation
 
@@ -105,7 +105,7 @@ services:
       - '127.0.0.1:4571:4571'
     environment:
       # LocalStack configuration: https://docs.localstack.cloud/references/configuration/
-      - LOCALSTACK_AUTH_TOKEN="ls-FosIJIBO-luBa-WUpe-9377-8829bUlo181f"
+      - LOCALSTACK_AUTH_TOKEN="ls-FosIJIBO-**************"
       - DEBUG=0 #Valor 1 habilitar DEBUG
       - SERVICES=logs,cloudformation,iam,s3,lambda,apigateway #Adicionar os serviços que estara usando
       - DATA_DIR=/tmp/localstack/data
@@ -194,11 +194,23 @@ curl --location --request POST 'http://localhost:4566/restapis/u8ehgbwatt/local/
 --data-raw ''
 ```
 
+Para usar uma URL alternativa, Aqui está um exemplo de como você acessaria a API HTTP/REST com um ID u8ehgbwatt:
+
+```sh
+http://u8ehgbwatt.execute-api.localhost.localstack.cloud:4566/local/hello 
+```
+[link documentação site oficial para usar api-gateway](https://docs.localstack.cloud/user-guide/aws/apigateway/)
+
 ### Verifique mensagem de logs:
 
 ```sh
 npm run infra:logs 
 ```
+
+Outra opçao para consultar logs, pode ser feito pela console via Browser da localStack
+
+Procedimento:
+[link do procedimento](/doc/Acessando-logs)
 
 ## Encerrar o ambiente:
 Quando terminar de testar sua aplicação, execute o seguinte comando para encerrar o LocalStack e remover os contêineres Docker:
@@ -236,6 +248,19 @@ curl --location --request POST 'http://localhost:4566/restapis/u8ehgbwatt/local/
 --header 'Content-Type: application/json' \
 --data-raw ''
 ```
+
+Outra opçao para consultar logs, pode ser feito pela console via Browser da localStack
+
+Procedimento:
+[link do procedimento](/doc/Acessando-logs)
+
+
+Para usar uma URL alternativa, Aqui está um exemplo de como você acessaria a API HTTP/REST com um ID u8ehgbwatt:
+
+```sh
+http://u8ehgbwatt.execute-api.localhost.localstack.cloud:4566/local/hello 
+```
+[link documentação site oficial para usar api-gateway](https://docs.localstack.cloud/user-guide/aws/apigateway/)
 
 ### Para consultar o status do serviço localStack
 
